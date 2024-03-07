@@ -1,0 +1,11 @@
+# Recursively ignore: 
+# 	- all hidden (name beginning with a dot) files and directories except .gitignore files
+# 	- all target directories
+# .gitignore files in sub-directories can be used to customize ignore rules at subtree level
+
+**/.*
+!**/.gitignore
+**/target/
+**/*.log
+**/.settings/*
+**/bin/
