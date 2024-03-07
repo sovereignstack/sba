@@ -1,0 +1,24 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      probes:
+        enabled: 'true'
+      show-details: always
+  server:
+    port: '8081'
+spring:
+  cloud:
+    kubernetes:
+      discovery:
+        all-namespaces: 'true'
+        primary-port-name: management
+        service-labels:
+          env: uat
+   
+server:
+  port: '8080'
+  
